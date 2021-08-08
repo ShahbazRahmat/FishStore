@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'jenkins/jenkins:lts' 
+            image 'docker:dind' 
             args '-p 3000:3000' 
         }
     }
