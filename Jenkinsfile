@@ -1,6 +1,6 @@
 pipeline {
     agent: docker {
-            image 'node:6-alpine' 
+            image 'jenkins/jenkins:lts' 
             args '-p 3000:3000' 
         }
     stages {
