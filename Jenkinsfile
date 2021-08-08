@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh '${workspace}\src\ npm install' 
+                sh "'/var/jenkins_home/workspace/CICD Jenkins/src' Project npm install" 
             }
         }
     }
