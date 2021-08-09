@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh "chmod +x -R '/var/jenkins_home/workspace/CICD Jenkins Project'"
+                sh 'whoami'
                 sh "'/var/jenkins_home/workspace/CICD Jenkins Project/src' Project npm install"
             }
         }
