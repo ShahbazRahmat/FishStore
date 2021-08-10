@@ -14,7 +14,7 @@ pipeline {
                 sh 'cd /var/jenkins_home/workspace/CICDJenkinsProject/src'
                 sh 'pwd'
                 sh 'ls -altch'
-                sh 'npm install'
+                //sh 'npm install'
                 //sh "'/var/jenkins_home/workspace/CICD Jenkins Project/src' Project npm install"
             }
         }
