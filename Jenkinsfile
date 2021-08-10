@@ -9,6 +9,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'whoami'
+                sh 'hostname'
                 sh "'/var/jenkins_home/workspace/CICD Jenkins Project/src' Project npm install"
             }
         }
