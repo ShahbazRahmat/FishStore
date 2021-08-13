@@ -5,9 +5,9 @@ pipeline {
             args '-p 3000:3000'
         }
     }
-    environment { 
+    environment {
         CI = 'true'
-	HOME = '.'
+		HOME = '.'
     	npm_config_cache = 'npm-cache'
     }
     stages {
@@ -17,8 +17,7 @@ pipeline {
                 sh 'npm install'
             }
         }
-    }
-    stage('Build') {
+		stage('Build') {
         stage('Create Build Artifacts') {
           steps {
             sh 'npm run build'
