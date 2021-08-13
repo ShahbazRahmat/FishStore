@@ -7,13 +7,22 @@ pipeline {
     }
     environment { 
         CI = 'true'
+	HOME = '.'
+    	npm_config_cache = 'npm-cache'
     }
     stages {
-        stage('Build') {
+        stage('Install Packages') {
             steps {
-				sh 'cd ${WORKSPACE}/src/'
+		sh 'cd ${WORKSPACE}/src/'
                 sh 'npm install'
             }
+        }
+    }
+    stage('Build') {
+        stage('Create Build Artifacts') {
+          steps {
+            sh 'npm run build'
+          }
         }
     }
 }
