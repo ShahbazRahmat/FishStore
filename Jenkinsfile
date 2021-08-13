@@ -11,7 +11,7 @@ pipeline {
                 sh 'whoami'
                 //sh "ls -altch '/var/jenkins_home/workspace/CICD Jenkins Project'"
                 //sh "ls -altch '/var/jenkins_home/workspace/CICD Jenkins Project/src'"
-                sh 'cd //var//jenkins_home//workspace//CICDPipelineProject//src'
+                sh 'cd \\var\\jenkins_home\\workspace\\CICDJenkinsProject\\src'
                 sh 'ls -altch'
                 sh 'pwd'
                 //sh 'npm install'
