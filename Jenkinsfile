@@ -8,12 +8,10 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'whoami'
+                //sh 'whoami'
                 //sh "ls -altch '/var/jenkins_home/workspace/CICD Jenkins Project'"
                 //sh "ls -altch '/var/jenkins_home/workspace/CICD Jenkins Project/src'"
-                sh 'cd /var/jenkins_home/workspace/CICDJenkinsProject/src/'
-                sh 'ls -altch'
-                sh 'pwd'
+                sh 'ls ${WORKSPACE}/'
                 //sh 'npm install'
                 //sh "'/var/jenkins_home/workspace/CICD Jenkins Project/src' Project npm install"
             }
