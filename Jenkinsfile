@@ -17,13 +17,10 @@ pipeline {
                 sh 'npm install'
             }
         }
-		stage('Build') {
         stage('Create Build Artifacts') {
           steps {
             sh 'npm run build'
           }
         }
-    }
 }
-
 }
