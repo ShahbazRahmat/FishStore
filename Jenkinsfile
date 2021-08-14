@@ -20,6 +20,7 @@ pipeline {
         stage('Create Build Artifacts') {
           steps {
             sh 'npm run build'
+	    sh 'ls -altch ${WORKSPACE}/src/'
           }
         }
 }
